@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>SFA - So Far Away</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/owl.carousel.css">
+        <link rel="stylesheet" href="css/animate.css">
+
+        <!--[if lt IE 9]>
+	    	<script src="scripts/vendor/html5shiv.js"></script>
+	    <![endif]-->
+
+        <script src="scripts/vendor/angular.min.js"></script>
+        <script src="scripts/vendor/angular-route.js"></script>
+    </head>
+
+    <body ng-app="soFarAway">
+    	<section class="container">
+    		<header>
+                <div class="absolut-head">
+                    <div class="head-container">
+                        <a id="logo" href="#"><img src="img/sfa-logo.png"></a><!-- 
+                     --><nav>
+                            <a id="contact" href="javascript:;">Contact</a><!-- 
+                         --><a id="shop" href="javascript:;">Shop</a><!-- 
+                         --><div class="head-persos"></div>
+                        </nav><!-- 
+                        
+                     --><ul class="social">
+                            <li id="instagram"><a href="http://instagram.com/sofarawaysfa" target="_blank"></a></li><!-- 
+                         --><li id="sep"></li><!-- 
+                         --><li id="facebook"><a href="https://www.facebook.com/sofarawaysfa" target="_blank"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <aside class="subheader">
+                    <ul>
+                        <li class="sub-fb">
+                            <img src="img/blue-subhead.png" alt="Blue">
+                        </li>
+                        <li class="subhead-mail">
+                            <p class="title">e-mail</p>
+                            <p><a class="mail" href="mailto:sofaraway.sfa@gmail.com">sofaraway.sfa@gmail.com</a></p>
+                        </li>
+                        <li class="subhead-tel">
+                            <p class="title">téléphone</p>
+                            <p>+33 6 66 46 19 70</p>
+                        </li>
+                        <li class="subhead-adress">
+                            <p class="title">Adresse</p>
+                            <p>9 rue marcel sembat<br>
+                            93100 MONTREUIL </p>
+                        </li>
+                        <a id="subhead-close" href="javascript:;">
+                            <img src="img/subhead-close.png" alt="Fermer">
+                        </a>
+                    </ul>
+                </aside>
+    		</header>
+
+    		<section class="content" ng-controller="MainController">
+    			<section ng-view=""></section>
+    		</section>
+
+            <div class="overlay"></div>
+
+		</section>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/main.js"></script>
+		<script src="scripts/controllers/home.js"></script>
+		<script src="scripts/controllers/personnages.js" defer></script>
+		<script src="scripts/vendor/jquery.js"></script>
+        <script src="scripts/vendor/TweenMax.min.js"></script>
+        <script src="scripts/vendor/owl.carousel.min.js"></script>
+    </body>
+</html>
