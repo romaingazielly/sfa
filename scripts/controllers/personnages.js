@@ -9,15 +9,16 @@ app.controller('PersonnagesController', ["$scope", function ($scope) {
 		items:1,
 		center: true,
 		autoplay: true,
-		autoplayTimeout: 2000,
+		autoplayTimeout: 3000,
 		loop: true,
 		mouseDrag: false,
-		smartSpeed: 800,
-		fluidSpeed: 1
+		smartSpeed: 1400,
+		responsive: true
 	});
 
 	$scope.$on('$viewContentLoaded', function(){
-		resize()
+		resize();
+		menu();
     	$(window).resize(resize);
 	});
 }])
@@ -25,4 +26,22 @@ app.controller('PersonnagesController', ["$scope", function ($scope) {
 var resize = function() {
 	var windowHeight = $(window).height() - 104;
 	$('.content-persos aside, .content-persos article').css({'height': windowHeight, 'line-height': windowHeight+'px'});
+}
+
+var menu = function(){
+	$('#menu').on('click', function(e){
+		e.preventDefault();
+
+		// Ouverture/Fermeture du menu latéral
+		$(this).toggleClass('open');
+
+		// Décalage du contenu
+		$('.boite').toggleClass('translate');
+
+		// Overlay
+		$('.boite').toggleClass('over');
+
+		// Arrivé du menu
+		$('#nav-menu').toggleClass('visible');
+	});
 }
