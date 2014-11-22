@@ -1,0 +1,11 @@
+{
+	"id": "big-bear",
+	"name": "Big bear",
+	"style" : "Lunettes, montre, chemise baseball SFA, tatoo, Fox tail, lego chain",
+	"charactere1": "Conscient de son charisme, il laisse les choses venir à lui.",
+	"charactere2": "Big bear est le grand frère de Bear. Ensemble depuis toujours, Ils sont rarement séparés.",
+	"visuel1": "img/persos/sfa-big-bear.png",
+	"visuel2": "img/persos/sfa-big-bear2.png",
+	"multivisuel": "true",
+	"next": "blue"
+}

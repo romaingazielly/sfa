@@ -1,0 +1,10 @@
+{
+	"id": "acero",
+	"name": "Acéro",
+	"style": "Bandana, cape de justicier, étoile de sheriff",
+	"charactere1": "Il n'obéit qu'à wolf. Il voulait absolument une cape rouge.",
+	"charactere2": "C'est un bon robot. Il a parlé de détruire la planète une fois mais c'est tout.",
+	"visuel1": "img/persos/sfa-acero.png",
+	"visuel2": "img/persos/acero.svg",
+	"next": "george"
+}

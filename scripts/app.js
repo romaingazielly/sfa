@@ -10,7 +10,7 @@ app.config(function ($routeProvider) {
 			templateUrl: "views/home.html",
 			controller: "HomeController"
 		})
-		.when("/personnages", {
+		.when("/personnages/:persoId", {
 			templateUrl: "views/personnages.html",
 			controller: "PersonnagesController"
 		});

@@ -44,7 +44,9 @@ header .social{display:inline-block; vertical-align:middle; width:8.4919473%; /*
 header .social li{display:inline-block; vertical-align:middle; width:34.482759%; /* 40 ÷ 116 */}
 header .social a{width:100%; height:40px; display:block;}
 header .social li#facebook a{background: url('../img/fb.png') no-repeat center; background-size:contain;}
+header .social li#facebook a:hover{background: url('../img/fb-h.png') no-repeat center; background-size:contain;}
 header .social li#instagram a{background: url('../img/ig.png') no-repeat center; background-size:contain;}
+header .social li#instagram a:hover{background: url('../img/ig-h.png') no-repeat center; background-size:contain;}
 header .social li#sep{width:1.7241379%; /* 2 ÷ 116 */ height:38px; background:#000101; margin-left: 19.327586%; /* 23 ÷ 116 */ margin-right:8.9827586%; /* 11 ÷ 116 */min-width: 1px;}
 header .subheader{position:absolute;height:155px; width:100%; min-width:1250px; background:#79a5a2 url('../img/bg-subheader.png') no-repeat center; z-index:100; top:-52px;}
 header .subheader ul{width:auto; max-width:1366px; margin:auto;}
@@ -66,21 +68,20 @@ header .subheader a#subhead-close{display:inline-block; margin-left:8.6383602%;/
 .liste-persos h1{color:#f4f4f4; font:2em "JandaManateeSolid"; margin-left:70px; text-transform:uppercase;}
 .liste-persos li {width:154px; height:154px; border:solid 3px #9a9b9b; display:inline-block; vertical-align:top; margin-right:6px; margin-bottom:6px;}
 .liste-persos li#moz-bear.current, .preview#bear, nav a.nav-bear:hover{background:#16a085;}
-.liste-persos li#moz-bigbear.current, .preview#bigbear, nav a.nav-big-bear:hover{background:#929291;}
+.liste-persos li#moz-big-bear.current, .preview#big-bear, nav a.nav-big-bear:hover{background:#929291;}
 .liste-persos li#moz-zion.current, .preview#zion, nav a.nav-zion:hover{background:#b29975;}
 .liste-persos li#moz-wolf.current, .preview#wolf, nav a.nav-wolf:hover{background:#a4526a;}
 .liste-persos li#moz-kat.current, .preview#kat, nav a.nav-kat:hover{background:#c6c6c6;}
 .liste-persos li#moz-acero.current, .preview#acero, nav a.nav-acero:hover{background:#d64d4e;}
 .liste-persos li#moz-blue.current, .preview#blue, nav a.nav-blue:hover{background:#6f82aa;}
 .liste-persos li#moz-george.current, .preview#george, nav a.nav-george:hover{background:#6d6d6d;}
-.liste-persos li#moz-unknow.current, .preview#unknow{background:#b5b5b5;}
+.liste-persos li#moz-unknow.current{background:#b5b5b5;}
+.preview#unknow{background:none;}
 .liste-persos li a{display:block;height:100%; width:100%;}
 .liste-persos li img{width:auto; max-width:100%;}
 
-
 .preview{position:relative; display:inline-block; vertical-align:middle; margin-left: 138px; margin-top: -80px;width:430px; height:460px; transform:rotate(45deg);}
 .preview img{position:absolute; right:0; bottom:0;}
-
 
 /* Personnages */
 .content-persos{position:relative; overflow:hidden;}
@@ -91,8 +92,6 @@ header .subheader a#subhead-close{display:inline-block; margin-left:8.6383602%;/
 .content-persos p{font:1em "SharkSoftBites"; text-transform:uppercase; display:inline-block; margin-bottom:30px;}
 .content-persos .inline{display:inline;}
 .content-persos .sfa-slider{background:#efefef;}
-article#acero-intro{background:#d64d4e;}
-article#acero-intro h1{background:#c84748 url('../img/persos/sfa-acero.png') no-repeat 0; background:#c84748 url('../img/persos/acero.svg') -400px 5px no-repeat; background-size:170%;}
 
 .content-persos aside{position:relative; display:inline-block; vertical-align:top; width:61.493411%; /* 840 ÷ 1366 */}
 .content-persos aside a {position:absolute; top:5px; color:#464949; font:0.9em "SharkSoftBites"; background:#f9f9f9; text-decoration:none; text-align:center; text-transform: uppercase; z-index:200;}
@@ -112,6 +111,34 @@ article#acero-intro h1{background:#c84748 url('../img/persos/sfa-acero.png') no-
 .content-persos .boite:before{content:""; position:absolute; display:block; opacity:0; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,.75); z-index:-1; transition:all .5s ease-out;}
 .content-persos .over.boite:before{opacity:1; z-index:195;}
 .content-persos .boite.translate{transform:translateX(-375px);}
+
+.content-persos .sidebar{position:absolute; bottom:0; width:100%; height:50px; background:#414141; z-index:201;}
+.content-persos .sidebar a{display:block; background:url('../img/btn-down.png') no-repeat center; height:40px; width:40px; margin:5px auto;}
+
+/* Acéro */
+article#acero-intro{background:#d64d4e;}
+article#acero-intro h1{background:#c84748 url('../img/persos/sfa-acero.png') no-repeat 0; background:#c84748 url('../img/persos/acero.svg') -400px 5px no-repeat; background-size:170%;}
+/* Bear */
+article#bear-intro{background:#16a085;}
+article#bear-intro h1{background:#149179 url('../img/persos/sfa-acero.png') no-repeat 0; background:#149179 url('../img/persos/acero.svg') -400px 5px no-repeat; background-size:170%;}
+/* Big-Bear */
+article#big-bear-intro{background:#929291;}
+article#big-bear-intro h1{background:#7b7b7b url('../img/persos/sfa-acero.png') no-repeat 0; background:#7b7b7b url('../img/persos/acero.svg') -400px 5px no-repeat; background-size:170%;}
+/* Blue */
+article#blue-intro{background:#6f82aa;}
+article#blue-intro h1{background:#637496 url('../img/persos/sfa-acero.png') no-repeat 0; background:#637496 url('../img/persos/acero.svg') -400px 5px no-repeat; background-size:170%;}
+/* George */
+article#george-intro{background:#6d6d6d;}
+article#george-intro h1{background:#606060 url('../img/persos/sfa-acero.png') no-repeat 0; background:#606060 url('../img/persos/acero.svg') -400px 5px no-repeat; background-size:170%;}
+/* Kat */
+article#kat-intro{background:#a4526a;}
+article#kat-intro h1{background:#9a4b63 url('../img/persos/sfa-acero.png') no-repeat 0; background:#9a4b63 url('../img/persos/acero.svg') -400px 5px no-repeat; background-size:170%;}
+/* Wolf */
+article#wolf-intro{background:#a4526a;}
+article#wolf-intro h1{background:#9a4b63 url('../img/persos/sfa-acero.png') no-repeat 0; background:#9a4b63 url('../img/persos/acero.svg') -400px 5px no-repeat; background-size:170%;}
+/* Zion */
+article#zion-intro{background:#b29975;}
+article#zion-intro h1{background:#a38c6b url('../img/persos/sfa-acero.png') no-repeat 0; background:#a38c6b url('../img/persos/acero.svg') -400px 5px no-repeat; background-size:170%;}
 
 
 

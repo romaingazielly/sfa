@@ -1,0 +1,10 @@
+{
+	"id": "zion",
+	"name": "Zion",
+	"style" : "Veste en jean SFA, tank top, short noir doublure camouflage",
+	"charactere1": "C'est le mâle dominant. Il ne prend pas le temps de discuter.",
+	"charactere2": "Zion est le boss du sfa gang. Sa couronne ne le quitte jamais. il prend toujours les bonnes décisions.",
+	"visuel1": "img/persos/sfa-zion.png",
+	"visuel2": "img/persos/acero.svg",
+	"next": "bear"
+}

@@ -1,0 +1,10 @@
+{
+	"id": "blue",
+	"name": "Blue",
+	"style" : "Cyclops pink sunglasses shwag. C'est un pingouin bleu qui vole",
+	"charactere1": "Personne n'a jamais entendu le son de sa voix.",
+	"charactere2": "Il soulève des trucs avec ses pouvoirs psychiques. Il adore aider.",
+	"visuel1": "img/persos/sfa-blue.png",
+	"visuel2": "img/persos/sfa-blue.png",
+	"next": "kat"
+}

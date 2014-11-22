@@ -1,0 +1,10 @@
+{
+	"id": "kat",
+	"name": "Kat",
+	"style" : "Noeud papillon, pocket square, collier SFA, être un chat",
+	"charactere1": "Il est très indépendant. Sa fierté est déjà légendaire.",
+	"charactere2": "Le dandy solitaire du Gang. Il a toujours des choses à faire mais personne ne sait jamais quoi.",
+	"visuel1": "img/persos/sfa-kat.png",
+	"visuel2": "img/persos/acero.svg",
+	"next": "acero"
+}

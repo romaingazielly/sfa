@@ -1,4 +1,3 @@
-
 app.controller('HomeController', function ($scope) {
 	var perso = $(".liste-persos li")
 	perso.hover(over, out);

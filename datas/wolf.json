@@ -1,0 +1,10 @@
+{
+	"id": "wolf",
+	"name": "Wolf",
+	"style" : "Strapback SFA, short cargo, crewneck ACero SFA, shamballa",
+	"charactere1": "naturellement calme, il ne cherche jamais le conflit.",
+	"charactere2": "Wolf est le 4ème membre du SFA GANG. Il est sous la protection permanente de son robot.",
+	"visuel1": "img/persos/sfa-wolf.png",
+	"visuel2": "img/persos/sfa-acero.png",
+	"next": "zion"
+}

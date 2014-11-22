@@ -1,0 +1,10 @@
+{
+	"id": "george",
+	"name": "George",
+	"style" : "beanie, Short noir basique, T-shirt SFA oversize, Tatoos",
+	"charactere1": "Difficile à cerner. Il a un très bon fond.",
+	"charactere2": "Inventeur de la paresse, il arrive souvent qu'il soit retrouvé endormi dans un coin.",
+	"visuel1": "img/persos/sfa-george.png",
+	"visuel2": "img/persos/acero.svg",
+	"next": "wolf"
+}

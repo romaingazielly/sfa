@@ -1,19 +1,39 @@
-app.controller('PersonnagesController', ["$scope", function ($scope) {
-	$scope.$watch("name", function (newValue, old) {
-		$scope.$emit("name_changed", { value: newValue })
-	})
+app.controller('PersonnagesController', ["$scope", "$rootScope", "$http", "$routeParams", function ($scope, $rootScope, $http, $routeParams) {
 
-	$(".sfa-slider").owlCarousel({
-		// animateOut: 'fadeOutDown',
-		// animateIn: 'fadeInDown',
-		items:1,
-		center: true,
-		autoplay: true,
-		autoplayTimeout: 3000,
-		loop: true,
-		mouseDrag: false,
-		smartSpeed: 1400,
-		responsive: true
+	$http.get('datas/'+$routeParams.persoId+'.json').success(function(data) {
+	    $scope.perso = data;
+
+	    if(data.multivisuel){
+	    	// Carousel
+		    $(".sfa-slider").owlCarousel({
+				animateOut: 'fadeOutUp',
+				animateIn: 'fadeInUp',
+				items:1,
+				center: true,
+				autoplay: true,
+				autoplayTimeout: 3000,
+				loop: false,
+				mouseDrag: false,
+				smartSpeed: 1400,
+				responsive: true
+			});
+		}else{
+			// Carousel
+		    $(".sfa-slider").owlCarousel({
+				animateOut: 'fadeOutUp',
+				animateIn: 'fadeInUp',
+				items:1,
+				center: true,
+				autoplay: false,
+				autoplayTimeout: 3000,
+				loop: false,
+				mouseDrag: false,
+				smartSpeed: 1400,
+				responsive: true
+			});
+
+	    }
+	    
 	});
 
 	$scope.$on('$viewContentLoaded', function(){
@@ -21,7 +41,8 @@ app.controller('PersonnagesController', ["$scope", function ($scope) {
 		menu();
     	$(window).resize(resize);
 	});
-}])
+
+}]);
 
 var resize = function() {
 	var windowHeight = $(window).height() - 104;
