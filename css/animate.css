@@ -3156,3 +3156,35 @@ Copyright (c) 2014 Daniel Eden
   -webkit-animation-name: slideOutUp;
           animation-name: slideOutUp;
 }
+
+
+/* Angular Animations */
+
+.animate-enter, 
+.animate-leave
+{ 
+    -webkit-transition: 1200ms cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -moz-transition: 1200ms cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -ms-transition: 1200ms cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    -o-transition: 1200ms cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+    transition: 1200ms cubic-bezier(0.680, -0.550, 0.265, 1.550) all;
+} 
+ 
+.animate-enter {
+    top: 100%;
+}
+.animate-enter.animate-enter-active {
+    top: 0;
+}
+ 
+.animate-leave {
+    top: 0;
+}
+.animate-leave.animate-leave-active{
+    top: -100%;
+}
+
+
+
+
+

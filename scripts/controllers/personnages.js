@@ -15,7 +15,9 @@ app.controller('PersonnagesController', ["$scope", "$rootScope", "$http", "$rout
 				loop: false,
 				mouseDrag: false,
 				smartSpeed: 1400,
-				responsive: true
+				responsive: true,
+				lazyLoad: true,
+				lazyContent: true
 			});
 		}else{
 			// Carousel
@@ -29,7 +31,9 @@ app.controller('PersonnagesController', ["$scope", "$rootScope", "$http", "$rout
 				loop: false,
 				mouseDrag: false,
 				smartSpeed: 1400,
-				responsive: true
+				responsive: true,
+				lazyLoad: true,
+				lazyContent: true
 			});
 
 	    }
@@ -66,3 +70,22 @@ var menu = function(){
 		$('#nav-menu').toggleClass('visible');
 	});
 }
+
+var slidePerso = function(){
+
+	$('.next-perso').on('click', function(e){
+		e.preventDefault();
+
+		var tl = new TimelineLite();
+	})
+}
+
+
+
+
+
+
+
+
+
+
