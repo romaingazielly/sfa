@@ -34,10 +34,10 @@ header .head-container{width:100%; max-width:1366px; margin:auto; position:relat
 header{width:100%; }
 header #logo{display:inline-block; vertical-align: middle; margin-left:4.3923865%;/* 60 ÷ 1366 */ margin-right:7.3206442%; /* 100 ÷ 1366 */;margin-bottom: 1px;}
 header nav {display:inline-block;width:51.976574% /* 710 ÷ 1366 */}
-header nav a {position:relative;display:inline-block; font:0.9em "JandaManateeSolid"; color:#1a1b1b; text-transform:uppercase; text-decoration:none; width:24.647887%; /* 175 ÷ 710 */; height:40px; border:solid 1px #929291; text-align:center; padding:6px 0;z-index:3; transition:all .2s ease-in-out;}
+header nav a {position:relative;display:inline-block; font:0.9em "JandaManateeSolid"; color:#1a1b1b; text-transform:uppercase; text-decoration:none; width:24.647887%; /* 175 ÷ 710 */; height:40px; border:solid 1px #929291; text-align:center; padding:6px 0;z-index:3; transition: all .3s ease-in-out;}
 header nav a#contact{background:url('../img/bg-headlink-contact.jpg') repeat-x 0 35px;}
 header nav a#shop{background:url('../img/bg-headlink-shop.jpg') repeat-x 0 35px; margin-left:4.1727672% /* 57 ÷ 1366 */}
-header nav a#contact:hover, header nav a#shop:hover, header nav a#contact.current{background-position:0 0;}
+header nav a#contact:hover, header nav a#shop:hover, header nav a#contact.current{background-position:0 0;color: #fff;}
 header .head-persos{display:inline-block; vertical-align:middle; margin:9px 00 0 4.2459736%; /* 58 ÷ 1366 */ width:33.943662%; /* 241px */ height:91px; background:url('../img/soon.png') bottom no-repeat; background-size:contain;}
 header nav a#shop:hover + .head-persos{background:url('../img/soon-h.png') no-repeat bottom; background-size:contain;}
 header .social{display:inline-block; vertical-align:middle; width:8.4919473% /* 116 ÷ 1366 */}
@@ -75,7 +75,7 @@ header .subheader a#subhead-close{display:inline-block; margin-left:8.6383602%;/
 .liste-persos li#moz-acero.current, .preview#acero, nav a.nav-acero:hover{background:#d64d4e;}
 .liste-persos li#moz-blue.current, .preview#blue, nav a.nav-blue:hover{background:#6f82aa;}
 .liste-persos li#moz-george.current, .preview#george, nav a.nav-george:hover{background:#6d6d6d;}
-.liste-persos li#moz-unknow.current{background:#b5b5b5;}
+.liste-persos li#moz-unknow.current{background:none;}
 .preview#unknow{background:none;}
 .liste-persos li a{display:block;height:100%; width:100%;}
 .liste-persos li img{width:auto; max-width:100%;}
