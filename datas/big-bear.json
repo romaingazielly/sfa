@@ -7,5 +7,6 @@
 	"visuel1": "img/persos/sfa-big-bear.png",
 	"visuel2": "img/persos/sfa-big-bear2.png",
 	"multivisuel": "true",
-	"next": "blue"
+	"next": "blue",
+	"prev": "bear"
 }

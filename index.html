@@ -14,6 +14,7 @@
 
         <script src="scripts/vendor/angular.min.js"></script>
         <script src="scripts/vendor/angular-route.js"></script>
+        <script src="scripts/vendor/angular-animate.js"></script>
     </head>
 
     <body ng-app="soFarAway">
@@ -50,18 +51,18 @@
                         </li>
                         <li class="subhead-adress">
                             <p class="title">Adresse</p>
-                            <p>9 rue marcel sembat<br>
-                            93100 MONTREUIL </p>
+                            <p><a href="https://goo.gl/maps/B0zSo" target="_blank">9 rue marcel sembat<br>
+                            93100 MONTREUIL</a></p>
                         </li>
                         <a id="subhead-close" href="javascript:;">
-                            <img src="img/subhead-close.png" alt="Fermer">
+                            <span></span>
                         </a>
                     </ul>
                 </aside>
     		</header>
 
     		<section class="content" ng-controller="MainController">
-    			<section ng-view="" ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}"></section>
+    			<section ng-view="" class="page-view" ng-class="pageAnimationClass"></section>
     		</section>
 
             <div class="overlay"></div>

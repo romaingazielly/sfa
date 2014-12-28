@@ -1,26 +1,10 @@
-app.controller('PersonnagesController', ["$scope", "$rootScope", "$http", "$routeParams", function ($scope, $rootScope, $http, $routeParams) {
-
+app.controller('PersonnagesController',
+	[ "$scope", "$rootScope", "$http", "$routeParams", "$location",
+	function ($scope, $rootScope, $http, $routeParams, $location) {
+	
 	$http.get('datas/'+$routeParams.persoId+'.json').success(function(data) {
 	    $scope.perso = data;
 
-	    if(data.multivisuel){
-	    	// Carousel
-		    $(".sfa-slider").owlCarousel({
-				animateOut: 'fadeOutUp',
-				animateIn: 'fadeInUp',
-				items:1,
-				center: true,
-				autoplay: true,
-				autoplayTimeout: 3000,
-				loop: false,
-				mouseDrag: false,
-				smartSpeed: 1400,
-				responsive: true,
-				lazyLoad: true,
-				lazyContent: true
-			});
-		}else{
-			// Carousel
 		    $(".sfa-slider").owlCarousel({
 				animateOut: 'fadeOutUp',
 				animateIn: 'fadeInUp',
@@ -35,9 +19,6 @@ app.controller('PersonnagesController', ["$scope", "$rootScope", "$http", "$rout
 				lazyLoad: true,
 				lazyContent: true
 			});
-
-	    }
-	    
 	});
 
 	$scope.$on('$viewContentLoaded', function(){
@@ -45,6 +26,20 @@ app.controller('PersonnagesController', ["$scope", "$rootScope", "$http", "$rout
 		menu();
     	$(window).resize(resize);
 	});
+
+	$scope.prev = function () {
+		$rootScope.go('/personnages/'+$scope.perso.prev, 'slideDown');
+	};
+
+	$scope.next = function () {
+		$rootScope.go('/personnages/'+$scope.perso.next, 'slideUp');
+	};
+
+	setTimeout(function(){
+		$('.switchbar').addClass('ok')
+	}, 100);
+
+
 
 }]);
 
@@ -54,7 +49,7 @@ var resize = function() {
 }
 
 var menu = function(){
-	$('#menu').on('click', function(e){
+	$('.menu').on('click', function(e){
 		e.preventDefault();
 
 		// Ouverture/Fermeture du menu latéral

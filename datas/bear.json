@@ -4,7 +4,7 @@
 	"style" : "Snapback SFA, Bandana, tatoo, kawai",
 	"charactere1": "Toujours parfaitement serein pour le bien de son gang. Bear agit en bonne mascotte.",
 	"charactere2": "Bear est le tout premier personnage SFA. Il représente l'esprit de la marque.",
-	"visuel1": "img/persos/sfa-bear.png",
-	"visuel2": "img/persos/acero.svg",
-	"next": "big-bear"
+	"visuel1": "img/persos/bear.svg",
+	"next": "big-bear",
+	"prev": "zion"
 }

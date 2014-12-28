@@ -6,5 +6,6 @@
 	"charactere2": "Wolf est le 4ème membre du SFA GANG. Il est sous la protection permanente de son robot.",
 	"visuel1": "img/persos/sfa-wolf.png",
 	"visuel2": "img/persos/sfa-acero.png",
-	"next": "zion"
+	"next": "zion",
+	"prev": "george"
 }

@@ -1,6 +1,12 @@
 app.controller('HomeController', function ($scope) {
 	var perso = $(".liste-persos li");
+	var previewImg = $('.preview img');
+	var titlePerso = $('#title-persos');
+	var previewPerso = $('.preview');
 	perso.hover(over, out);
+
+	// Suppression de l'effet de slide sur la home
+	$('.content > section').removeClass('slideUp');
 
 	function over(){
 		var $this = $(this);
@@ -10,21 +16,16 @@ app.controller('HomeController', function ($scope) {
 
 			// Changement dynamique du titre
 			var title = $this.find('img').attr('alt');
-			$('#title-persos').html(title);
-
-			// Changement dynamique du fond du petit personnage
-			perso.removeClass('current');
-			$this.addClass('current');
+			titlePerso.html(title);
 
 			// Changement dynamique du fond du gros personnage
 			var bigPerso = $this.attr('id').substr(4);
-			$('.preview').attr('id',bigPerso);
+			previewPerso.attr('id',bigPerso);
 
 			// Changement dynamique du gros personnage
-			$('.preview img').attr('src', 'img/persos/big-'+bigPerso+'.png');
-			$('.preview img').attr('alt', title);
+			previewImg.attr('src', 'img/persos/big-'+bigPerso+'.png');
+			previewImg.attr('alt', title);
 		}
-
 	}
 
 	function out(){

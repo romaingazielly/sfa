@@ -6,5 +6,6 @@
 	"charactere2": "Il soulève des trucs avec ses pouvoirs psychiques. Il adore aider.",
 	"visuel1": "img/persos/sfa-blue.png",
 	"visuel2": "img/persos/sfa-blue.png",
-	"next": "kat"
+	"next": "kat",
+	"prev": "big-bear"
 }

@@ -13,26 +13,28 @@
 		</article><!-- 
 	 --><aside>
 			<a id="share" href="javascript:;">Share</a>
-			<a id="menu" href="#"><span></span></a>
+			<a class="menu" href="javascript:;"><span></span></a>
 			<section class="sfa-slider">
-				<img src="{{perso.visuel1}}" alt="{{perso.name}}">
-				<img src="{{perso.visuel2}}" alt="{{perso.name}}" width="100%" height="100%" onerror="this.removeAttribute('onerror'); this.src='img/persos/sfa-acero.png'" />
+				<img src="{{perso.visuel1}}" alt="{{perso.name}}" id="img-{{perso.id}}">
+				<!-- <img src="{{perso.visuel2}}" alt="{{perso.name}}" width="100%" height="100%" onerror="this.removeAttribute('onerror'); this.src='img/persos/sfa-acero.png'" /> -->
 			</section>
 		</aside>
-		<div class="sidebar">
-			<a class="next-perso" href="#/personnages/{{perso.next}}"></a>
+		<div class="switchbar">
+			<a href="javascript:;" class="scrollToTop" ng-click="prev()"></a>
+			<span></span>
+			<a href="javascript:;" class="scrollToBot" ng-click="next()"></a>
 		</div>
 	</div>
 	<nav id="nav-menu">
 		<ul>
-			<li><a class="nav-bear" href="#/personnages/bear"><span>Bear</span></a></li>
-			<li><a class="nav-big-bear" href="#/personnages/big-bear"><span>Big Bear</span></a></li>
-			<li><a class="nav-blue" href="#/personnages/blue"><span>Blue</span></a></li>
-			<li><a class="nav-kat" href="#/personnages/kat"><span>Kat</span></a></li>
-			<li><a class="nav-acero" href="#/personnages/acero"><span>Acéro</span></a></li>
-			<li><a class="nav-george" href="#/personnages/george"><span>George</span></a></li>
-			<li><a class="nav-wolf" href="#/personnages/wolf"><span>Wolf</span></a></li>
-			<li><a class="nav-zion" href="#/personnages/zion"><span>Zion</span></a></li>
+			<li><a ng-click="go('/personnages/bear')" class="nav-bear"><span>Bear</span></a></li>
+			<li><a ng-click="go('/personnages/big-bear', 'slideUp')" class="nav-big-bear" href="#/personnages/big-bear"><span>Big Bear</span></a></li>
+			<li><a ng-click="go('/page2', 'slideUp')" class="nav-blue" href="#/personnages/blue"><span>Blue</span></a></li>
+			<li><a ng-click="go('/page2', 'slideUp')" class="nav-kat" href="#/personnages/kat"><span>Kat</span></a></li>
+			<li><a ng-click="go('/page2', 'slideUp')" class="nav-acero" href="#/personnages/acero"><span>Acéro</span></a></li>
+			<li><a ng-click="go('/page2', 'slideUp')" class="nav-george" href="#/personnages/george"><span>George</span></a></li>
+			<li><a ng-click="go('/page2', 'slideUp')" class="nav-wolf" href="#/personnages/wolf"><span>Wolf</span></a></li>
+			<li><a ng-click="go('/page2', 'slideUp')" class="nav-zion" href="#/personnages/zion"><span>Zion</span></a></li>
 		</ul>
 	</nav>
 </section>

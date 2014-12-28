@@ -6,5 +6,6 @@
 	"charactere2": "C'est un bon robot. Il a parlé de détruire la planète une fois mais c'est tout.",
 	"visuel1": "img/persos/sfa-acero.png",
 	"visuel2": "img/persos/acero.svg",
-	"next": "george"
+	"next": "george",
+	"prev": "kat"
 }

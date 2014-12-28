@@ -6,5 +6,6 @@
 	"charactere2": "Inventeur de la paresse, il arrive souvent qu'il soit retrouvé endormi dans un coin.",
 	"visuel1": "img/persos/sfa-george.png",
 	"visuel2": "img/persos/acero.svg",
-	"next": "wolf"
+	"next": "wolf",
+	"prev": "acero"
 }
