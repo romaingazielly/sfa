@@ -39,7 +39,7 @@ header nav a {position:relative;display:inline-block; font:0.9em "JandaManateeSo
 header nav a#contact{background:url('../img/bg-headlink-contact.jpg') repeat-x 0 35px;}
 header nav a#shop{background:url('../img/bg-headlink-shop.jpg') repeat-x 0 35px; margin-left:4.1727672% /* 57 ÷ 1366 */}
 header nav a#contact:hover, header nav a#shop:hover, header nav a#contact.current{background-position:0 0;color: #fff;}
-header .head-persos{display:inline-block; vertical-align:middle; margin:9px 00 0 4.2459736%; /* 58 ÷ 1366 */ width:33.943662%; /* 241px */ height:91px; background:url('../img/soon.png') bottom no-repeat; background-size:contain;}
+header .head-persos{display:inline-block; vertical-align:middle; margin:9px 00 0 4.2459736%; /* 58 ÷ 1366 */ width:33.943662%; /* 241px */ height:91px; background:url('../img/soon.png') bottom no-repeat; background-size:contain; transition:all .3s}
 header nav a#shop:hover + .head-persos{background:url('../img/soon-h.png') no-repeat bottom; background-size:contain;}
 header .social{display:inline-block; vertical-align:middle; width:8.4919473% /* 116 ÷ 1366 */}
 header .social li{display:inline-block; vertical-align:middle; width:34.482759% /* 40 ÷ 116 */}
@@ -61,14 +61,14 @@ header .subheader a#subhead-close{display:inline-block; margin-left:8.6383602%;/
 header .subheader a#subhead-close span{position:relative; display: inline-block; vertical-align: middle;width:50px; margin:auto; height:5px; background: transparent; transition:all .3s;}
 header .subheader a#subhead-close span:before{position: absolute;content:""; display: inline-block; height:5px; width:50px; background:#f9f9f9; -webkit-transform: rotate(45deg); transform: rotate(45deg);top: 13px;}
 header .subheader a#subhead-close span:after{position: absolute;content:""; display: inline-block; height:5px; width:50px; background:#f9f9f9; top: 13px;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
-.subhead-mail {width:21.669107% /* 296 ÷ 1366 */}
-.subhead-tel {width:18.008785% /* 246 ÷ 1366 */}
-.subhead-tel {width:20.131772% /* 275 ÷ 1366 */}
+.subhead-mail {width:21.669107%; /* 296 ÷ 1366 */}
+.subhead-tel {width:18.008785%; /* 246 ÷ 1366 */}
+.subhead-tel {width:20.131772%; /* 275 ÷ 1366 */}
 
 /* Home */
 .content{width: 100%; overflow:hidden;}
 .content > section {max-width:1366px; margin:auto;}
-.liste-persos{display:inline-block; vertical-align:middle; width:480px; padding: 100px 0 110px; margin-left: 175px; -webkit-transform:rotate(45deg); transform:rotate(45deg);}
+.liste-persos{position:relative;display:inline-block; vertical-align:middle; width:480px; padding: 100px 0 110px; margin-left: 175px; -webkit-transform:rotate(45deg); transform:rotate(45deg); transition: left 1s linear; left: 0;}
 .liste-persos h1{color:#f4f4f4; font:2em "JandaManateeSolid"; margin-left:70px; text-transform:uppercase;}
 .liste-persos li {width:154px; height:154px; border:solid 3px #9a9b9b; display:inline-block; vertical-align:top; margin-right:6px; margin-bottom:6px;}
 .liste-persos li#moz-bear:hover, .preview#bear, nav a.nav-bear:hover{background:#16a085;}
@@ -84,7 +84,7 @@ header .subheader a#subhead-close span:after{position: absolute;content:""; disp
 .liste-persos li a{display:block;height:100%; width:100%;}
 .liste-persos li img{width:auto; max-width:100%;}
 
-.preview{position:relative; display:inline-block; vertical-align:middle; margin-left: 138px; margin-top: -80px;width:430px; height:460px; -webkit-transform:rotate(45deg); transform:rotate(45deg);}
+.preview{position:relative; display:inline-block; vertical-align:middle; margin-left: 138px; margin-top: -80px;width:430px; height:460px; -webkit-transform:rotate(45deg); transform:rotate(45deg); transition: right 1s linear; right: 0;}
 .preview img{position:absolute; right:0; bottom:0;}
 
 /* Personnages */
@@ -167,8 +167,11 @@ article#zion-intro h1{background:#a38c6b url('../img/persos/sfa-zion.png') no-re
 
 
 
-
-
+.ng-leave.slideFromHome {transition: all 1s linear;}
+.ng-leave-active.slideFromHome .liste-persos {left:-100%;}
+.ng-leave-active.slideFromHome .preview {right:-100%;}
+.ng-enter.slideFromHome {opacity:0; transition: opacity 2s linear;}
+.ng-enter-active.slideFromHome{opacity:1; }
 
 
 /* slideUp infos */
@@ -191,6 +194,24 @@ article#zion-intro h1{background:#a38c6b url('../img/persos/sfa-zion.png') no-re
   transform: translateY(-100%);
 }*/
 
+
+/* FadeIn */
+.ng-leave.fadeIn {opacity:0;transition: all 1000ms ease;}
+.ng-leave-active.fadeIn{opacity:1;}
+.ng-enter.fadeIn {opacity:0;transition: all 1000ms ease;}
+.ng-enter-active.fadeIn{opacity:1;}
+
+/* slideUp en 2 temps */
+.ng-leave.slideUp {transition: opacity 1000ms ease;}
+.ng-enter.slideUp {transition: opacity 1000ms ease;}
+
+.ng-enter.slideUp .content-persos article, .ng-leave.slideUp .content-persos article{transition: transform 700ms ease-in-out;}
+.ng-enter.slideUp .content-persos .sfa-slider, .ng-leave.slideUp .content-persos .sfa-slider{transition: transform 1000ms ease-in-out;}
+.ng-leave.slideUp article, .ng-leave.slideUp .sfa-slider{transform: translateY(0%);}
+.ng-leave-active.slideUp article, .ng-leave-active.slideUp .sfa-slider{transform: translateY(-100%);}
+.ng-enter.slideUp article, .ng-enter.slideUp .sfa-slider{transform: translateY(00%);}
+.ng-enter-active.slideUp article, .ng-enter-active.slideUp .sfa-slider{transform: translateY(-100%);}
+
 /* slideDown infos */
 
 /*.ng-leave.slideDown {
@@ -203,7 +224,7 @@ article#zion-intro h1{background:#a38c6b url('../img/persos/sfa-zion.png') no-re
 }
 
 .ng-enter.slideDown {
-  transition: all 000ms ease;
+  transition: all 1000ms ease;
   transform: translateY(-200%);
 }
 
@@ -211,58 +232,14 @@ article#zion-intro h1{background:#a38c6b url('../img/persos/sfa-zion.png') no-re
   transform: translateY(-100%);
 }*/
 
+/* slideDown en 2 temps */
+.ng-leave.slideDown {transition: opacity 1000ms ease;}
+.ng-enter.slideDown {transition: opacity 1000ms ease;}
 
-/* FadeIn */
-.ng-leave.fadeIn {opacity:0;transition: all 1000ms ease;}
-.ng-leave-active.fadeIn{opacity:1;}
-.ng-enter.fadeIn {opacity:0;transition: all 1000ms ease;}
-.ng-enter-active.fadeIn{opacity:1;}
+.ng-enter.slideDown .content-persos article, .ng-leave.slideDown .content-persos article{transition: transform 700ms ease-in-out;}
+.ng-enter.slideDown .content-persos .sfa-slider, .ng-leave.slideDown .content-persos .sfa-slider{transition: transform 1000ms ease-in-out;}
+.ng-leave.slideDown article, .ng-leave.slideDown .sfa-slider{transform: translateY(0%);}
+.ng-leave-active.slideDown article, .ng-leave-active.slideDown .sfa-slider{transform: translateY(100%);}
+.ng-enter.slideDown article, .ng-enter.slideDown .sfa-slider{transform: translateY(-200%);}
+.ng-enter-active.slideDown article, .ng-enter-active.slideDown .sfa-slider{transform: translateY(-100%);}
 
-/* slideUp infos */
-.ng-leave.slideUp {
-  transition: opacity 1000ms ease;
-}
-.ng-enter.slideUp {
-  transition: opacity 1000ms ease;
-}
-
-.ng-enter.slideUp .content-persos article, .ng-leave.slideUp .content-persos article{transition: transform 700ms ease-in-out;}
-.ng-enter.slideUp .content-persos aside, .ng-leave.slideUp .content-persos aside{transition: transform 1000ms ease-in-out;}
-
-
-.ng-leave.slideUp article, .ng-leave.slideUp aside{
-  transform: translateY(0%);
-}
-
-.ng-leave-active.slideUp article, .ng-leave-active.slideUp aside{
-  transform: translateY(-100%);
-}
-
-.ng-enter.slideUp article, .ng-enter.slideUp aside{
-  transform: translateY(00%);
-}
-
-.ng-enter-active.slideUp article, .ng-enter-active.slideUp aside{
-  transform: translateY(-100%);
-}
-
-
-/* slideDown infos */
-
-.ng-leave.slideDown {
-  transition: all 1000ms ease;
-  transform: translateY(0%);
-}
-
-.ng-leave-active.slideDown {
-  transform: translateY(100%);
-}
-
-.ng-enter.slideDown {
-  transition: all 1000ms ease;
-  transform: translateY(-200%);
-}
-
-.ng-enter-active.slideDown {
-  transform: translateY(-100%);
-}

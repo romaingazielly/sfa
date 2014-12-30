@@ -63,6 +63,9 @@ var menu = function(){
 
 		// Arrivé du menu
 		$('#nav-menu').toggleClass('visible');
+
+		// SmoothScroll
+		$('#nav-menu').scrollTo({top:720, left:0}, 3000);
 	});
 }
 

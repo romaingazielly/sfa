@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="fr">
+<!--[if lt IE 9 ]><html <?php language_attributes(); ?> class="ie ie8"> <![endif]-->
+<!--[if IE 9 ]><html <?php language_attributes(); ?> class="ie ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr"><!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <title>SFA - So Far Away</title>
@@ -39,7 +41,10 @@
                 <aside class="subheader">
                     <ul>
                         <li class="sub-fb">
-                            <img src="img/blue-subhead.png" alt="Blue">
+                            <img src="img/blue-subhead.png" alt="Blue" usemap="blueFb">
+                            <map name="blueFb" id="blueFb">
+                                <area shape="poly" coords=" 150,72, 170,68, 182,74, 196,73, 208,71, 219,64, 225,52, 226,41, 226,28, 219,19, 202,5, 186,4, 167,9, 159,11, 149,20, 145,30, 144,42, 146,49, 154,59, 160,59, 148,70" href="https://www.facebook.com/sofarawaysfa" target="_blank" alt="SFA - Facebook"/>
+                            </map>
                         </li>
                         <li class="subhead-mail">
                             <p class="title">e-mail</p>
@@ -73,6 +78,7 @@
 		<script src="scripts/controllers/home.js"></script>
 		<script src="scripts/controllers/personnages.js"></script>
 		<script src="scripts/vendor/jquery.js"></script>
+        <script src="scripts/vendor/jquery.scrollTo.min.js"></script>
         <script src="scripts/vendor/TweenMax.min.js"></script>
         <script src="scripts/vendor/easing/EasePack.min.js"></script>
         <script src="scripts/vendor/owl.carousel.min.js"></script>

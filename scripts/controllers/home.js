@@ -25,6 +25,9 @@ app.controller('HomeController', function ($scope) {
 			// Changement dynamique du gros personnage
 			previewImg.attr('src', 'img/persos/big-'+bigPerso+'.png');
 			previewImg.attr('alt', title);
+
+				// Animation
+				TweenLite.fromTo(previewImg, .5, {right:50, bottom:-50, autoAlpha:0}, {right:0, bottom:0, autoAlpha:1});
 		}
 	}
 
