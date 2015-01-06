@@ -6,24 +6,21 @@ app.controller('PersonnagesController',
 	    $scope.perso = data;
 
 		    $(".sfa-slider").owlCarousel({
-				animateOut: 'fadeOutUp',
-				animateIn: 'fadeInUp',
 				items:1,
 				center: true,
-				autoplay: false,
+				autoplay: true,
 				autoplayTimeout: 3000,
 				loop: false,
 				mouseDrag: false,
 				smartSpeed: 1400,
-				responsive: true,
-				lazyLoad: true,
-				lazyContent: true
+				responsive: true
 			});
 	});
 
 	$scope.$on('$viewContentLoaded', function(){
 		resize();
 		menu();
+		share();
     	$(window).resize(resize);
 	});
 
@@ -39,15 +36,13 @@ app.controller('PersonnagesController',
 		$('.switchbar').addClass('ok')
 	}, 100);
 
-
-
 }]);
 
 var resize = function() {
 	var windowHeight = $(window).height() - 104;
 	$('.content-persos aside, .content-persos article').css({'height': windowHeight, 'line-height': windowHeight+'px'});
 }
-
+var scrolled = false; // Booléen pour le scroll auto du menu
 var menu = function(){
 	$('.menu').on('click', function(e){
 		e.preventDefault();
@@ -65,7 +60,11 @@ var menu = function(){
 		$('#nav-menu').toggleClass('visible');
 
 		// SmoothScroll
-		$('#nav-menu').scrollTo({top:720, left:0}, 3000);
+		if($('#nav-menu').hasClass('visible') && !scrolled){
+			$('#nav-menu').scrollTo({top:720, left:0}, 2000, function(){
+				scrolled = true;
+			});
+		}
 	});
 }
 
@@ -78,12 +77,22 @@ var slidePerso = function(){
 	})
 }
 
-
-
-
-
-
-
-
-
+var share = function(){
+	$('#share-tw, #share-fb').click(function(event) {
+    var width  = 575,
+        height = 400,
+        left   = ($(window).width()  - width)  / 2,
+        top    = ($(window).height() - height) / 2,
+        url    = this.href,
+        opts   = 'status=1' +
+                 ',width='  + width  +
+                 ',height=' + height +
+                 ',top='    + top    +
+                 ',left='   + left;
+    
+    window.open(url, 'twitter', opts);
+ 
+    return false;
+  });
+}
 

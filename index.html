@@ -17,6 +17,11 @@
         <script src="scripts/vendor/angular.min.js"></script>
         <script src="scripts/vendor/angular-route.js"></script>
         <script src="scripts/vendor/angular-animate.js"></script>
+
+        <meta property="og:url" content="http://sofaraway.com" /> 
+        <meta property="og:title" content="SFA - So Far Away" />
+        <meta property="og:description" content="Bienvenu sur le site du SFA gang" /> 
+        <meta property="og:image" content="http://sfa.romain.dev/img/sfa-logo.png" /> 
     </head>
 
     <body ng-app="soFarAway">
@@ -82,5 +87,22 @@
         <script src="scripts/vendor/TweenMax.min.js"></script>
         <script src="scripts/vendor/easing/EasePack.min.js"></script>
         <script src="scripts/vendor/owl.carousel.min.js"></script>
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '879746602046380',
+              xfbml      : true,
+              version    : 'v2.2'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
     </body>
 </html>

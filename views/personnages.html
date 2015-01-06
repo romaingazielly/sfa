@@ -12,11 +12,14 @@
 			</div>
 		</article><!-- 
 	 --><aside>
-			<a id="share" href="javascript:;">Share</a>
-			<a class="menu" href="javascript:;"><span></span></a>
+			<div class="carre" id="share" href="javascript:;">
+				<span>Share</span>
+				<a href="http://www.facebook.com/sharer.php?s=100&p[title]=SFA - {{perso.name}}&p[url]=http://sfa.romain.dev/%23/personnages/{{perso.id}}" id="share-fb"></a><!-- 
+			 --><a href="https://twitter.com/share?text={{perso.charactere2}}&url=http://sofaraway.com/%23/{{perso.id}}&hashtags=sfa" id="share-tw"></a>
+			</div>
+			<a class="menu carre" href="javascript:;"><span></span></a>
 			<section class="sfa-slider">
 				<img src="{{perso.visuel1}}" alt="{{perso.name}}" id="img-{{perso.id}}">
-				<!-- <img src="{{perso.visuel2}}" alt="{{perso.name}}" width="100%" height="100%" onerror="this.removeAttribute('onerror'); this.src='img/persos/sfa-acero.png'" /> -->
 			</section>
 		</aside>
 		<div class="switchbar">
