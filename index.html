@@ -25,6 +25,16 @@
     </head>
 
     <body ng-app="soFarAway">
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/fr_FR/sdk.js#xfbml=1&appId=879746602046380&version=v2.0";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      </script>
+      
     	<section class="container">
     		<header>
                 <div class="absolut-head">
@@ -83,26 +93,9 @@
 		<script src="scripts/controllers/home.js"></script>
 		<script src="scripts/controllers/personnages.js"></script>
 		<script src="scripts/vendor/jquery.js"></script>
-        <script src="scripts/vendor/jquery.scrollTo.min.js"></script>
-        <script src="scripts/vendor/TweenMax.min.js"></script>
-        <script src="scripts/vendor/easing/EasePack.min.js"></script>
-        <script src="scripts/vendor/owl.carousel.min.js"></script>
-        <script>
-          window.fbAsyncInit = function() {
-            FB.init({
-              appId      : '879746602046380',
-              xfbml      : true,
-              version    : 'v2.2'
-            });
-          };
-
-          (function(d, s, id){
-             var js, fjs = d.getElementsByTagName(s)[0];
-             if (d.getElementById(id)) {return;}
-             js = d.createElement(s); js.id = id;
-             js.src = "//connect.facebook.net/en_US/sdk.js";
-             fjs.parentNode.insertBefore(js, fjs);
-           }(document, 'script', 'facebook-jssdk'));
-        </script>
+    <script src="scripts/vendor/jquery.scrollTo.min.js"></script>
+    <script src="scripts/vendor/TweenMax.min.js"></script>
+    <script src="scripts/vendor/easing/EasePack.min.js"></script>
+    <script src="scripts/vendor/owl.carousel.min.js"></script>
     </body>
 </html>

@@ -33,7 +33,7 @@ app.controller('PersonnagesController',
 	};
 
 	setTimeout(function(){
-		$('.switchbar').addClass('ok')
+		$('.switchbar').addClass('ok');
 	}, 100);
 
 }]);
@@ -68,6 +68,7 @@ var menu = function(){
 	});
 }
 
+// En chantier
 var slidePerso = function(){
 
 	$('.next-perso').on('click', function(e){
@@ -77,8 +78,9 @@ var slidePerso = function(){
 	})
 }
 
+// Partage Twitter
 var share = function(){
-	$('#share-tw, #share-fb').click(function(event) {
+	$('#share-tw').click(function(event) {
     var width  = 575,
         height = 400,
         left   = ($(window).width()  - width)  / 2,
