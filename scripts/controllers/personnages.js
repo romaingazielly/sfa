@@ -32,6 +32,15 @@ app.controller('PersonnagesController',
 		$rootScope.go('/personnages/'+$scope.perso.next, 'slideUp');
 	};
 
+	$('.boite').bind('mousewheel', function(event) {
+	    if (event.originalEvent.wheelDelta >= 0) {
+	        console.log('Scroll up');
+	    }
+	    else {
+	        console.log('Scroll down');
+	    }
+	});
+
 	setTimeout(function(){
 		$('.switchbar').addClass('ok');
 	}, 100);

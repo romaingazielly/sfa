@@ -4,21 +4,30 @@ app.controller('MainController', function() {
 
 	animMenu();
 
+	// Apparition de la home une fois le chargement effectué
+	angular.element(document).ready(function () {
+        $('.content').addClass('visible');
+
+        // Pour harmoniser la taille de la home
+        $('.page-view').height($(document).height() - 104);
+
+        $(window).resize(function(){
+        	 $('.page-view').height($(document).height() - 104);
+        });
+    });
+
 });
 
 function animMenu() {
 	var contactOpen = false;
-	var tl = new TimelineLite({paused:true});
+	var tl = new TimelineMax({paused:true});
 	var overlay = $('.overlay');
-	var subMenu = $('.subheader');
-	var content = $('.content');
 	var contact = $('#contact');
 	var close = $('#subhead-close');
 
-	tl.to(overlay, 0, {css:{display:'block'}});
-	tl.to(overlay, .5, {css:{opacity:1}}, "+=0");
-	tl.to(subMenu, .2, {css:{top:103}, ease:Power4.easeInOut}, "-=.5");
-	tl.to(content, .2, {css:{marginTop:155, ease:Power4.easeInOut}}, "-=.5");
+	tl.set(overlay, {css:{display:'block'}})
+	  .to($('.subheader, .content'), .6, {css: { "transform" : "translate3d(0px, 155px, 0px)" }})
+	  .to(overlay, .6, {css:{opacity:1}}, "-=.6");
 	
 	contact.on('click', function(e){
 		if(!contactOpen){
@@ -27,16 +36,18 @@ function animMenu() {
 			tl.play();
 			contactOpen = true;
 		}else{
-			closeMenu();
+			close.trigger('click');
 		}
 	});
 
-	close.on('click', closeMenu);
+	overlay.on('click', function(){
+		close.trigger('click');
+	});
 
-	function closeMenu(){
+	close.on('click', function(){
 		tl.reverse();
 		contact.removeClass('current');
 		contactOpen = false;
-	}
+	});
 }
 

@@ -31,6 +31,10 @@ app.run(['$rootScope', '$location', '$window', function ($rootScope, $location, 
 
 	$rootScope.go = function (path, pageAnimationClass) {
 		if (typeof(pageAnimationClass) === 'undefined') { // Use a default, your choice
+
+			// Ferme le menu
+			$('.menu').trigger('click');
+			
 	        $rootScope.pageAnimationClass = 'fadeIn';
 	         console.log('yolo')
 	    }
