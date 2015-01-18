@@ -2,6 +2,8 @@ app.controller('PersonnagesController',
 	[ "$scope", "$rootScope", "$http", "$routeParams", "$location",
 	function ($scope, $rootScope, $http, $routeParams, $location) {
 	
+	$scope.isScrolling = false;
+
 	$http.get('datas/'+$routeParams.persoId+'.json').success(function(data) {
 	    $scope.perso = data;
 
@@ -33,12 +35,20 @@ app.controller('PersonnagesController',
 	};
 
 	$('.boite').bind('mousewheel', function(event) {
+		if ($scope.isScrolling) return;
+
 	    if (event.originalEvent.wheelDelta >= 0) {
-	        console.log('Scroll up');
+	        $scope.prev();
 	    }
 	    else {
-	        console.log('Scroll down');
+	        $scope.next();
 	    }
+
+	    $scope.isScrolling = true;
+
+	    window.setTimeout(function () {
+	    	$scope.isScrolling = false;
+	    }, 1000);
 	});
 
 	setTimeout(function(){
@@ -57,7 +67,7 @@ var menu = function(){
 		e.preventDefault();
 
 		// Ouverture/Fermeture du menu latéral
-		$(this).toggleClass('open');
+		$('.menu').toggleClass('open');
 
 		// Décalage du contenu
 		$('.boite').toggleClass('translate');
@@ -89,7 +99,7 @@ var slidePerso = function(){
 
 // Partage Twitter
 var share = function(){
-	$('#share-tw').click(function(event) {
+	$('#share-tw, #share-fb').click(function(event) {
     var width  = 575,
         height = 400,
         left   = ($(window).width()  - width)  / 2,

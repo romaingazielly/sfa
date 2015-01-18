@@ -9,11 +9,11 @@ app.controller('MainController', function() {
         $('.content').addClass('visible');
 
         // Pour harmoniser la taille de la home
-        $('.page-view').height($(document).height() - 104);
+        // $('.page-view').height($(document).height() - 104);
 
-        $(window).resize(function(){
-        	 $('.page-view').height($(document).height() - 104);
-        });
+        // $(window).resize(function(){
+        // 	 $('.page-view').height($(document).height() - 104);
+        // });
     });
 
 });

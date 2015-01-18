@@ -1,6 +1,6 @@
 <section class="content-persos">
 	<div class="boite">
-		<article id="{{perso.id}}-intro">
+		<article id="{{perso.id}}-intro" class="infos-perso">
 			<h1>{{perso.name}}</h1>
 			<div class="infos">
 				<h2 class="inline">Style :</h2>
@@ -14,7 +14,7 @@
 	 --><aside>
 			<div class="carre" id="share" href="javascript:;">
 				<span>Share</span>
-				<a href="javascript:;" id="share-fb"><div class="fb-share-button" data-href="http://sfa.romain.dev/#/personnages/{{perso.id}}" data-layout="button"></div></a><!-- 
+				<a href="http://www.facebook.com/sharer.php?s=100&p[title]=SFA - {{perso.name}}&p[url]=http://sfa.romain.dev/%23/personnages/{{perso.id}}" id="share-fb"></a><!-- 
 			 --><a href="https://twitter.com/share?text={{perso.charactere2}}&url=http://sofaraway.com/%23/{{perso.id}}&hashtags=sfa" id="share-tw"></a>
 			</div>
 			<a class="menu carre" href="javascript:;"><span></span></a>
