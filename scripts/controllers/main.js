@@ -14,6 +14,7 @@ app.controller('MainController', function() {
         // $(window).resize(function(){
         // 	 $('.page-view').height($(document).height() - 104);
         // });
+
     });
 
 });

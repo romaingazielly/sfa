@@ -130,6 +130,8 @@ header .subheader a#subhead-close span:after{position: absolute;content:""; disp
 .content-persos .over.boite:before{opacity:1; z-index:195; pointer-events:none;}
 .content-persos .boite.translate{-webkit-transform:translateX(-375px);transform:translateX(-375px);}
 
+.slideFromHome .content-persos .switchbar, .slideFromHome .content-persos .switchbar * {transition-delay: 1s !important;}
+.boite.over .switchbar{pointer-events:none;}
 .content-persos .switchbar {position:relative; display: block; width:68px; height:135px; position: absolute; top: 50%; margin-top: -75px; background:#b4b4b4; left: 38.506582%; z-index: 2; margin-left: -34px; box-shadow:-4px 4px 2px rgba(0,0,0,.3); transition:opacity .8s;}
 .content-persos .switchbar span{transition:all 1s;width:30px; height:3px;opacity:0; display: block; margin: 66px auto; background:#303030;}
 .content-persos .switchbar.ok, .content-persos .switchbar.ok span{opacity:1;}
@@ -186,7 +188,8 @@ article#zion-intro h1{background:#a38c6b url('../img/persos/zion.png') no-repeat
 .ng-enter-active.slideFromHome .infos-persos{margin-right: 0; margin-left: 0; }
 /* */
 
-
+.ng-enter.slideToHome {opacity:0; transition: opacity 1.2s linear;}
+.ng-enter-active.slideToHome{opacity:1; }
 /* slideUp infos */
 
 /*.ng-leave.slideUp {

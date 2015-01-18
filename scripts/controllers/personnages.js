@@ -84,6 +84,10 @@ var menu = function(){
 				scrolled = true;
 			});
 		}
+
+		$('.over .sfa-slider, .over .infos-perso').click(function(){
+    		$('.menu').click()
+    	})
 	});
 }
 

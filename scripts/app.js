@@ -42,6 +42,9 @@ app.run(['$rootScope', '$location', '$window', function ($rootScope, $location, 
 	        $rootScope.pageAnimationClass = 'slideFromHome';
 	         console.log('yoloSWAG')
 	    }
+	    else if (typeof(pageAnimationClass) === 'slideToHome') { // Use a default, your choice
+	        $rootScope.pageAnimationClass = 'slideToHome';
+	    }
 	         
 	    else { // Use the specified animation
 	        $rootScope.pageAnimationClass = pageAnimationClass;
