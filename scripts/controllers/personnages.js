@@ -24,6 +24,8 @@ app.controller('PersonnagesController',
 		menu();
 		share();
     	$(window).resize(resize);
+
+    	$('.content').addClass('overflow');
 	});
 
 	$scope.prev = function () {
@@ -34,22 +36,25 @@ app.controller('PersonnagesController',
 		$rootScope.go('/personnages/'+$scope.perso.next, 'slideUp');
 	};
 
-	$('.boite').bind('mousewheel', function(event) {
-		if ($scope.isScrolling) return;
+	// Changement de perso au scroll
+	// $('.boite').on('mousewheel', function(event) {
+	// 	if ($scope.isScrolling) return;
 
-	    if (event.originalEvent.wheelDelta >= 0) {
-	        $scope.prev();
-	    }
-	    else {
-	        $scope.next();
-	    }
+	//     if (event.originalEvent.wheelDelta >= 0) {
+	//         $scope.prev();
+	//     }
+	//     else {
+	//         $scope.next();
+	//     }
 
-	    $scope.isScrolling = true;
+	//     $scope.isScrolling = true;
 
-	    window.setTimeout(function () {
-	    	$scope.isScrolling = false;
-	    }, 1000);
-	});
+	//     window.setTimeout(function () {
+	//     	$scope.isScrolling = false;
+
+	//         $scope.$apply();
+	//     }, 1000);
+	// });
 
 	setTimeout(function(){
 		$('.switchbar').addClass('ok');

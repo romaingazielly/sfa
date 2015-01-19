@@ -8,6 +8,9 @@ app.controller('HomeController', function ($scope) {
 	// Suppression de l'effet de slide sur la home
 	$('.content > section').removeClass('slideUp');
 
+	// Retire l'overflow ajouté par la page personnages
+	$('.content').removeClass('overflow');
+
 	function over(){
 		var $this = $(this);
 		var persoId = $this.attr('id');

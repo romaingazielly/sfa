@@ -36,29 +36,23 @@ app.run(['$rootScope', '$location', '$window', function ($rootScope, $location, 
 			$('.menu').trigger('click');
 			
 	        $rootScope.pageAnimationClass = 'fadeIn';
-	         console.log('yolo')
 	    }
 	    else if (typeof(pageAnimationClass) === 'slideFromHome') { // Use a default, your choice
 	        $rootScope.pageAnimationClass = 'slideFromHome';
-	         console.log('yoloSWAG')
 	    }
 	    else if (typeof(pageAnimationClass) === 'slideToHome') { // Use a default, your choice
 	        $rootScope.pageAnimationClass = 'slideToHome';
 	    }
-	         
 	    else { // Use the specified animation
 	        $rootScope.pageAnimationClass = pageAnimationClass;
-	         console.log('yolo2 : '+pageAnimationClass)
 	    }
 	 
 	    if (path === 'back') { // Allow a 'back' keyword to go to previous page
 	        $window.history.back();
-	     console.log('yolo3')
 	    }
 	         
 	    else { // Go to the specified path
 	        $location.path(path);
-	         console.log('yol4o')
 	    }
 	};
 }]);

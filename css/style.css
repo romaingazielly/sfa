@@ -57,10 +57,10 @@ header .subheader li.sub-fb img{width:auto;max-width: 100%; position:absolute; b
 header .subheader p.title{color:#292928; font:1em "JandaManateeSolid"; text-align:center; text-transform:uppercase;}
 header .subheader p{color:#e6e7e7; font:1em/1em "JandaManateeSolid"; text-align:center;}
 header .subheader a {color:#e6e7e7; text-decoration:none;}
-header .subheader a#subhead-close{display:inline-block; margin-left:8.6383602%;/* 118 ÷ 1366 */ margin-top:18px;background: rgba(0,0,0,.4);height: 50px;position: relative;}
-header .subheader a#subhead-close span{position:relative; display: inline-block; vertical-align: middle;width:50px; margin:auto; height:5px; background: transparent; transition:all .3s;}
-header .subheader a#subhead-close span:before{position: absolute;content:""; display: inline-block; height:5px; width:50px; background:#f9f9f9; -webkit-transform: rotate(45deg); transform: rotate(45deg);top: 13px;}
-header .subheader a#subhead-close span:after{position: absolute;content:""; display: inline-block; height:5px; width:50px; background:#f9f9f9; top: 13px;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
+header .subheader a#subhead-close{display:inline-block; margin-left:8.6383602%;/* 118 ÷ 1366 */ margin-top:18px;background: rgba(0,0,0,.4);height: 50px;width: 50px;position: relative;padding-left: 8px;}
+header .subheader a#subhead-close span{position:relative; display: inline-block; vertical-align: middle;width: 40px; margin:auto; height: 4px; background: transparent; transition:all .3s;}
+header .subheader a#subhead-close span:before{position: absolute;content:""; display: inline-block; height: 4px; width: 35px; background:#f9f9f9; -webkit-transform: rotate(45deg); transform: rotate(45deg);top: 13px;}
+header .subheader a#subhead-close span:after{position: absolute;content:""; display: inline-block; height: 4px; width: 35px; background:#f9f9f9; top: 13px;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
 .subhead-mail {width:21.669107% /* 296 ÷ 1366 */}
 .subhead-tel {width:18.008785% /* 246 ÷ 1366 */}
 .subhead-tel {width:20.131772% /* 275 ÷ 1366 */}
@@ -106,9 +106,9 @@ header .subheader a#subhead-close span:after{position: absolute;content:""; disp
 .content-persos aside #share span{width:100%; }
 .content-persos aside #share:hover > span{opacity:0; position:absolute; z-index:-1;}
 .content-persos aside #share:hover a{display:block; opacity:.65;}
-.content-persos aside #share a#share-fb{display:inline-block; position: relative;width:50%; height:100%; background:url('../img/fb.png') no-repeat center;background-size: 80%;}
+.content-persos aside #share a#share-fb{display:inline-block; position: relative;width:50%; height:100%; background:url('../img/fb.png') no-repeat center;background-size: 70%;}
 .content-persos aside #share a:hover{opacity:1;}
-.content-persos aside #share a#share-tw{display:inline-block; width:50%; height:100%; background:url('../img/tw.png') no-repeat center; background-size: 80%;}
+.content-persos aside #share a#share-tw{display:inline-block; width:50%; height:100%; background:url('../img/tw.png') no-repeat center; background-size: 70%;}
 .content-persos aside a.menu{width: 70px; height: 70px; background:#1a1b1b; right: 14px; line-height: 63px;}
 .content-persos aside a.menu span{position:relative; display: inline-block; vertical-align: middle;width: 40px; margin:auto; height: 4px; background:#f9f9f9; opacity:1; transition:all .3s;}
 .content-persos aside a.menu span:before{content:''; display:block; position:absolute; width: 40px; height: 4px; background:#f9f9f9; transition:all .3s; transform:translateY(300%); -webkit-transform: translateY(300%);}
@@ -176,7 +176,7 @@ nav a.nav-zion:after{background: url('../img/persos/sfa-zion.png') no-repeat 0px
 article#zion-intro{background:#b29975;}
 article#zion-intro h1{background:#a38c6b url('../img/persos/zion.png') no-repeat 0 0 /*background:#a38c6b url('../img/persos/zion.svg') -400px 5px no-repeat;*/ }
 
-
+.overflow{overflow:hidden;}
 
 .ng-leave.slideFromHome {transition: left 1s linear, right 1s linear}
 .ng-leave-active.slideFromHome .liste-persos {left:-100%;}
