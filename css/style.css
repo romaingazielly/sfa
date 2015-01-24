@@ -57,10 +57,10 @@ header .subheader li.sub-fb img{width:auto;max-width: 100%; position:absolute; b
 header .subheader p.title{color:#292928; font:1em "JandaManateeSolid"; text-align:center; text-transform:uppercase;}
 header .subheader p{color:#e6e7e7; font:1em/1em "JandaManateeSolid"; text-align:center;}
 header .subheader a {color:#e6e7e7; text-decoration:none;}
-header .subheader a#subhead-close{display:inline-block; margin-left:8.6383602%;/* 118 ÷ 1366 */ margin-top:18px;background: rgba(0,0,0,.4);height: 50px;width: 50px;position: relative;padding-left: 8px;}
+header .subheader a#subhead-close{display:inline-block; margin-left:8.6383602%;/* 118 ÷ 1366 */ margin-top:18px;background: rgba(0,0,0,.4);height: 50px;width: 50px;position: relative;padding-left: 7px;}
 header .subheader a#subhead-close span{position:relative; display: inline-block; vertical-align: middle;width: 40px; margin:auto; height: 4px; background: transparent; transition:all .3s;}
-header .subheader a#subhead-close span:before{position: absolute;content:""; display: inline-block; height: 4px; width: 35px; background:#f9f9f9; -webkit-transform: rotate(45deg); transform: rotate(45deg);top: 13px;}
-header .subheader a#subhead-close span:after{position: absolute;content:""; display: inline-block; height: 4px; width: 35px; background:#f9f9f9; top: 13px;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
+header .subheader a#subhead-close span:before{position: absolute;content:""; display: inline-block; height: 4px; width: 35px; background:#f9f9f9; -webkit-transform: rotate(45deg); transform: rotate(45deg);top: 15px;}
+header .subheader a#subhead-close span:after{position: absolute;content:""; display: inline-block; height: 4px; width: 35px; background:#f9f9f9; top: 15px;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
 .subhead-mail {width:21.669107% /* 296 ÷ 1366 */}
 .subhead-tel {width:18.008785% /* 246 ÷ 1366 */}
 .subhead-tel {width:20.131772% /* 275 ÷ 1366 */}
