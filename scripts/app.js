@@ -17,6 +17,10 @@ app.config(function ($routeProvider) {
 		});
 });
 
+// app.controller('MainController', ['$scope', '$rootScope', function ($scope, $rootScope) {
+// 	$rootScope.metaDescription = "yooyoyoyoyoyo";
+// }]);
+
 app.run(['$rootScope', '$location', '$window', function ($rootScope, $location, $window) {
 
 	// Détection IE10

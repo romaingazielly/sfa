@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<!--[if lt IE 9 ]><html <?php language_attributes(); ?> class="ie ie8"> <![endif]-->
-<!--[if IE 9 ]><html <?php language_attributes(); ?> class="ie ie9"> <![endif]-->
-<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr"><!--<![endif]-->
+<!--[if lt IE 9 ]><html class="ie ie8" ng-app="soFarAway"> <![endif]-->
+<!--[if IE 9 ]><html class="ie ie9" ng-app="soFarAway"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="fr" ng-app="soFarAway"><!--<![endif]-->
     <head>
         <meta charset="utf-8">
         <title>SFA - So Far Away</title>
+        <meta name="description" value="Bienvenue sur le site du SFA gang" ng-attr-value="{{metaDescription}}">
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/owl.carousel.css">
@@ -20,11 +21,11 @@
 
         <meta property="og:url" content="http://sofaraway.fr" /> 
         <meta property="og:title" content="SFA - So Far Away" />
-        <meta property="og:description" content="Bienvenu sur le site du SFA gang" /> 
+        <meta property="og:description" content="Bienvenue sur le site du SFA gang" /> 
         <meta property="og:image" content="http://sofaraway.fr/img/sfa-logo.png" /> 
     </head>
 
-    <body ng-app="soFarAway">
+    <body>
       <div id="fb-root"></div>
       <script>(function(d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];

@@ -1,8 +1,8 @@
 app.controller('PersonnagesController',
 	[ "$scope", "$rootScope", "$http", "$routeParams", "$location",
 	function ($scope, $rootScope, $http, $routeParams, $location) {
-	
-	$scope.isScrolling = false;
+
+	isScrolling = false;
 
 	$http.get('datas/'+$routeParams.persoId+'.json').success(function(data) {
 	    $scope.perso = data;
@@ -17,6 +17,8 @@ app.controller('PersonnagesController',
 				smartSpeed: 1400,
 				responsive: true
 			});
+
+		$rootScope.metaDescription = $scope.perso.name + ' - ' + $scope.perso.charactere2;
 	});
 
 	$scope.$on('$viewContentLoaded', function(){
@@ -38,7 +40,7 @@ app.controller('PersonnagesController',
 
 	// Changement de perso au scroll
 	// $('.boite').on('mousewheel', function(event) {
-	// 	if ($scope.isScrolling) return;
+	// 	if (isScrolling == true) return;
 
 	//     if (event.originalEvent.wheelDelta >= 0) {
 	//         $scope.prev();
@@ -47,12 +49,15 @@ app.controller('PersonnagesController',
 	//         $scope.next();
 	//     }
 
-	//     $scope.isScrolling = true;
+	//     isScrolling = true;
+	//     $scope.$apply();
+
+	//     console.log(event.originalEvent.wheelDelta, isScrolling)
+
+	    
 
 	//     window.setTimeout(function () {
-	//     	$scope.isScrolling = false;
-
-	//         $scope.$apply();
+	//     	isScrolling = false;
 	//     }, 1000);
 	// });
 
