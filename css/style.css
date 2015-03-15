@@ -57,10 +57,10 @@ header .subheader li.sub-fb img{width:auto;max-width: 100%; position:absolute; b
 header .subheader p.title{color:#292928; font:1em "JandaManateeSolid"; text-align:center; text-transform:uppercase;}
 header .subheader p{color:#e6e7e7; font:1em/1em "JandaManateeSolid"; text-align:center;}
 header .subheader a {color:#e6e7e7; text-decoration:none;}
-header .subheader a#subhead-close{display:inline-block; margin-left:8.6383602%;/* 118 ÷ 1366 */ margin-top:18px;background: rgba(0,0,0,.4);height: 50px;width: 50px;position: relative;padding-left: 7px;}
-header .subheader a#subhead-close span{position:relative; display: inline-block; vertical-align: middle;width: 40px; margin:auto; height: 4px; background: transparent; transition:all .3s;}
-header .subheader a#subhead-close span:before{position: absolute;content:""; display: inline-block; height: 4px; width: 35px; background:#f9f9f9; -webkit-transform: rotate(45deg); transform: rotate(45deg);top: 15px;}
-header .subheader a#subhead-close span:after{position: absolute;content:""; display: inline-block; height: 4px; width: 35px; background:#f9f9f9; top: 15px;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);}
+header .subheader a#subhead-close{display:inline-block; margin-left:8.6383602%;/* 118 ÷ 1366 */ margin-top:18px;background: rgba(0,0,0,.4);height: 50px;width: 50px;position: relative;}
+header .subheader a#subhead-close span{position: absolute;   left: 0;right: 0;top: 50%; height: 6px; margin-top: -3px;background: transparent; transition:all .3s;display: block;}
+header .subheader a#subhead-close span:before{position: absolute;content:""; display: inline-block; height: 4px; width: 36px; background:#f9f9f9; -webkit-transform: rotate(45deg); transform: rotate(45deg);top: 2px;left: 50%;margin-left: -18px;transform-origin: center;}
+header .subheader a#subhead-close span:after{position: absolute;content:""; display: inline-block; height: 4px; width: 36px; background:#f9f9f9; margin-left: -18px;left: 50%;top: 2px;-webkit-transform: rotate(-45deg);transform: rotate(-45deg);transform-origin: center;}
 .subhead-mail {width:21.669107% /* 296 ÷ 1366 */}
 .subhead-tel {width:18.008785% /* 246 ÷ 1366 */}
 .subhead-tel {width:20.131772% /* 275 ÷ 1366 */}
@@ -183,33 +183,8 @@ article#zion-intro h1{background:#a38c6b url('../img/persos/zion.png') no-repeat
 .ng-leave-active.slideFromHome .preview {right:-100%;}
 .ng-enter.slideFromHome {opacity:0; transition: opacity 1.2s linear; transition-delay:.8s;}
 .ng-enter-active.slideFromHome{opacity:1; }
-/*
-.ng-enter.slideFromHome .infos-perso{margin-left:-100%; margin-right:100%; }
-.ng-enter-active.slideFromHome .infos-persos{margin-right: 0; margin-left: 0; }
-/* */
-
 .ng-enter.slideToHome {opacity:0; transition: opacity 1.2s linear;}
 .ng-enter-active.slideToHome{opacity:1; }
-/* slideUp infos */
-
-/*.ng-leave.slideUp {
-  transition: all 1000ms ease;
-  transform: translateY(0%);
-}
-
-.ng-leave-active.slideUp {
-  transform: translateY(-100%);
-}
-
-.ng-enter.slideUp {
-  transition: all 1000ms ease;
-  transform: translateY(0%);
-}
-
-.ng-enter-active.slideUp {
-  transform: translateY(-100%);
-}*/
-
 
 /* FadeIn */
 .ng-leave.fadeIn {position:absolute; opacity:0;transition: opacity 1000ms ease;}
@@ -228,25 +203,6 @@ article#zion-intro h1{background:#a38c6b url('../img/persos/zion.png') no-repeat
 .ng-enter.slideUp article, .ng-enter.slideUp .sfa-slider{-webkit-transform: translateY(00%);transform: translateY(00%);}
 .ng-enter-active.slideUp article, .ng-enter-active.slideUp .sfa-slider{-webkit-transform: translateY(-100%);transform: translateY(-100%);}
 
-/* slideDown infos */
-
-/*.ng-leave.slideDown {
-  transition: all 1000ms ease;
-  transform: translateY(0%);
-}
-
-.ng-leave-active.slideDown {
-  transform: translateY(100%);
-}
-
-.ng-enter.slideDown {
-  transition: all 1000ms ease;
-  transform: translateY(-200%);
-}
-
-.ng-enter-active.slideDown {
-  transform: translateY(-100%);
-}*/
 
 /* slideDown en 2 temps */
 .ng-leave.slideDown {transition: opacity 1000ms ease;}
